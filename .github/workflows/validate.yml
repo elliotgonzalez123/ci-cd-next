@@ -29,3 +29,11 @@ jobs:
 
       - name: 🔩 Build
         run: npm run build
+
+  deploy-production:
+    needs: [validate]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test deploy
+        run: echo "Deploying...."
